@@ -17,14 +17,16 @@ header {
   color: white;
   padding: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
 }
 
+/* MENÚ */
 header ul {
   list-style: none;
-  display: flex;
+  display: none; /* mobile first: menú ocult */
   flex-direction: column;
   gap: 0.5rem;
   margin: 0;
@@ -37,16 +39,32 @@ header a {
   text-decoration: none;
 }
 
+/* BOTÓ HAMBURGUESA */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  display: block; /* visible per mòbil */
+}
+
+/* Quan el menú està actiu */
+header nav ul.active {
+  display: flex;
+}
+
 /* HERO */
 .hero {
   background: url("img/arribada.jpg") no-repeat center center/cover;
   color: white;
   text-align: center;
-  padding: 3rem 1rem;
-  min-height: 60vh; /* més alt */
+  padding: 1rem;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
+  font-size: 1.2rem;
 }
 
 /* SECCIONS */
@@ -57,13 +75,33 @@ section {
 /* QUI SOM */
 #qui-som {
   background: #e0f2f1;
-  padding: 2rem 0; /* fons ocupa tot l'ample */
+  padding: 2rem 1rem;
+  text-align: justify;
 }
 
 #qui-som .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem; /* marges interns */
+  padding: 0 1rem;
+}
+
+/* COL·LABORA */
+#colabora {
+  background: #f9f9f9;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+#colabora h2 {
+  margin-bottom: 1rem;
+  color: rgba(255, 68, 0, 0.831);
+}
+
+#colabora p {
+  color: #444;
+  text-align: justify;
+  width: 80%;
+  margin: 1.5rem auto;
 }
 
 /* GRID PROJECTES / TARGETES */
@@ -71,7 +109,7 @@ section {
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5rem; /* menys separació */
+  gap: 1.5rem;
   margin-top: 1rem;
   width: 80%;
   margin: 0 auto;
@@ -86,19 +124,18 @@ section {
   text-align: center;
   padding: 1rem;
   transition: transform 0.3s ease;
-  width: 90%; /* ocupa tota la columna del grid */
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0; /* eliminar marge extra */
+  margin: 0;
 }
 
 .card img {
   width: 100%;
-  height: 180px; /* altura fixa per a les imatges */
-  object-fit: cover; /* retalla la imatge per omplir l'espai */
-  object-fit: contain; /* mostra imatge sencera */
+  height: 150px;
+  object-fit: contain;
   background: #fff;
   border-radius: 8px 8px 0 0;
 }
@@ -121,10 +158,11 @@ section {
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
   text-decoration: none;
+  transition: background 0.3s ease;
+  width: 100%;
 }
 
 /* FORMULARI centrat */
-
 #contacte h2 {
   text-align: center;
   margin-bottom: 1rem;
@@ -145,7 +183,8 @@ section {
 }
 
 .contact-info {
-  margin-bottom: 1rem;
+  margin: 0 auto;
+  width: 90%;
 }
 
 form {
@@ -153,7 +192,7 @@ form {
   flex-direction: column;
   gap: 0.5rem;
   max-width: 400px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
@@ -164,7 +203,9 @@ form button {
   padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100%;
+  box-sizing: border-box;
+  width: 95%;
+  font-size: 1rem;
 }
 
 form button {
@@ -191,11 +232,18 @@ footer {
   header {
     flex-direction: row;
     justify-content: space-between;
+    padding: 1rem 5rem;
   }
 
+  /* Menú visible en tablets i ocultem el botó */
   header ul {
+    display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+  .menu-toggle {
+    display: none;
   }
 
   .grid,
