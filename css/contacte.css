@@ -11,6 +11,63 @@ body {
   height: auto;
 }
 
+/* Oculta overlay por defecto */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.menu-cuadro {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.menu-cuadro ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.menu-cuadro li {
+  margin: 1rem 0;
+}
+
+.menu-cuadro a {
+  text-decoration: none;
+  color: #ff4400;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Solo mostrar el botón hamburguesa en móvil */
+.menu-toggle {
+  display: block;
+}
+
 /* HEADER */
 header {
   background: rgba(255, 68, 0, 0.831);
@@ -40,19 +97,19 @@ header a {
 }
 
 /* BOTÓ HAMBURGUESA */
-.menu-toggle {
+/* .menu-toggle {
   background: none;
   border: none;
   font-size: 3rem;
   color: white;
   cursor: pointer;
-  display: block; /* visible per mòbil */
-}
+  display: block; 
+} */
 
 /* Quan el menú està actiu */
-header nav ul.active {
+/* header nav ul.active {
   display: flex;
-}
+} */
 
 #contacte {
   background: #e0f2f1;
