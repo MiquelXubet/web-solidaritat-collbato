@@ -85,6 +85,14 @@ section {
   padding: 0 1rem;
 }
 
+.text-escriptori {
+  display: none;
+}
+
+.text-mobil {
+  display: block;
+}
+
 /* COL·LABORA */
 #colabora {
   background: #f9f9f9;
@@ -287,6 +295,15 @@ footer {
 
   .logo img {
     width: 220px;
+  }
+
+  /* Per defecte, només mostra escriptori */
+  .text-mobil {
+    display: none;
+  }
+
+  .text-escriptori {
+    display: block;
   }
 
   .container-contacte {
