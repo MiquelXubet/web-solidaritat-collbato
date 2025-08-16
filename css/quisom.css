@@ -1,0 +1,156 @@
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* LOGO */
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+/* HEADER */
+header {
+  background: rgba(255, 68, 0, 0.831);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* MENÚ */
+header ul {
+  list-style: none;
+  display: none; /* mobile first: menú ocult */
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* BOTÓ HAMBURGUESA */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  display: block; /* visible per mòbil */
+}
+
+/* Quan el menú està actiu */
+header nav ul.active {
+  display: flex;
+}
+
+/* Contenidor secció Qui Som */
+#qui-som .container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* HERO específic */
+.hero h1 {
+  font-size: 2rem;
+  color: #004d40;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Titulars */
+#qui-som h2 {
+  color: rgba(255, 68, 0, 0.831);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#qui-som h3 {
+  color: #00695c;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paràgrafs */
+#qui-som p {
+  line-height: 1.7;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+/* Llistes */
+#qui-som ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 600px) {
+  #qui-som .container {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .menu-toggle {
+    display: none; /* ocultem hamburguesa en escriptori */
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .logo img {
+    width: 220px;
+  }
+
+  #qui-som .container {
+    padding: 3rem;
+  }
+}
