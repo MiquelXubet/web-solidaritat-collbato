@@ -168,8 +168,12 @@ section {
   margin-bottom: 1rem;
 }
 
+#contacte {
+  background: #e0f2f1;
+}
+
 .container-contacte {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
   display: flex;
@@ -178,23 +182,15 @@ section {
   justify-content: center;
 }
 
-#contacte {
-  background: #e0f2f1;
-}
-
 .contact-info {
-  margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 400px;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
+  width: 100%;
 }
 
 form input,
@@ -204,7 +200,7 @@ form button {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  width: 95%;
+  width: 100%;
   font-size: 1rem;
 }
 
@@ -232,16 +228,14 @@ footer {
   header {
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem 5rem;
   }
 
-  /* Menú visible en tablets i ocultem el botó */
   header ul {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    font-size: 1.5rem;
+    gap: 1rem;
   }
+
   .menu-toggle {
     display: none;
   }
@@ -250,23 +244,55 @@ footer {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .container-contacte {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    flex: 1;
+  }
+
+  form {
+    flex: 2;
+    max-width: none;
+  }
 }
 
 /* Escriptori (≥900px) */
 @media (min-width: 900px) {
-  .grid,
-  .cards {
-    grid-template-columns: repeat(3, 1fr);
+  .container-contacte {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start; /* alineació al principi */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
   }
 
-  .container-contacte {
-    flex-direction: row;
-    justify-content: space-between;
+  .contact-info {
+    flex: 1; /* ocupa 1/3 de l'amplada */
+    min-width: 200px; /* per no fer-la massa estreta */
   }
 
   form {
-    max-width: 600px;
-    width: 100%;
+    flex: 2; /* ocupa 2/3 de l'amplada */
+    min-width: 500px; /* amplada mínima */
+    width: auto; /* elimina width fix */
+    margin: 0;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    width: 100%; /* s'adapta al 100% del formulari */
+  }
+
+  .grid,
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hero {
