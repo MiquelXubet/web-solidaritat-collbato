@@ -56,7 +56,7 @@ header nav ul.active {
 
 /* HERO */
 .hero {
-  background: url("img/arribada.jpg") no-repeat center center/cover;
+  background: url("../img/arribada.jpg") no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -262,6 +262,33 @@ footer {
 
 /* Escriptori (≥900px) */
 @media (min-width: 900px) {
+  .menu-toggle {
+    display: none; /* ocultem hamburguesa en escriptori */
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .logo img {
+    width: 220px;
+  }
+
   .container-contacte {
     display: flex;
     flex-direction: row;
@@ -293,13 +320,5 @@ footer {
   .grid,
   .cards {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .hero {
-    padding: 6rem 2rem;
-  }
-
-  .logo img {
-    width: 220px;
   }
 }

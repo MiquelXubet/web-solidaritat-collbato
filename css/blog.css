@@ -60,18 +60,6 @@ header nav ul.active {
   display: flex;
 }
 
-/* HERO */
-.hero {
-  background: url("img/arribada.jpg") no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /* BLOG */
 #blog {
   padding: 2rem 1rem;
@@ -168,12 +156,21 @@ footer {
 
 /* Escriptori (≥900px) */
 @media (min-width: 900px) {
-  .blog-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .menu-toggle {
     display: none; /* ocultem hamburguesa en escriptori */
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.5rem;
   }
 
   header ul {
@@ -182,11 +179,59 @@ footer {
     gap: 1rem;
   }
 
-  .hero {
-    padding: 6rem 2rem;
-  }
-
   .logo img {
     width: 220px;
+  }
+
+  .blog-cards {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  .blog-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* separa contingut i botó */
+    text-align: center;
+    padding: 2rem;
+    width: 400px; /* mida fixa */
+    min-height: 450px; /* alçada mínima perquè tot el contingut hi càpiga */
+    box-sizing: border-box;
+  }
+
+  .blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+    background: #fff;
+  }
+
+  .blog-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: rgba(255, 68, 0, 0.831);
+  }
+
+  .blog-card p {
+    font-size: 0.95rem;
+    color: #444;
+    flex-grow: 1; /* ocupa espai restant */
+    margin-bottom: 1rem;
+  }
+
+  .blog-card .btn {
+    display: block; /* assegura que es mostri */
+    background: #00695c;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto; /* manté el botó a la part inferior */
   }
 }
