@@ -267,10 +267,6 @@ form button:hover {
   text-align: center;
 }
 
-#fes-te-soci h2 {
-  text-align: center;
-}
-
 #fes-te-soci p {
   text-align: justify;
 }
@@ -449,5 +445,70 @@ footer {
   .colabora-card img {
     width: 250px;
     height: 250px;
+  }
+
+  .container-form,
+  .bizum-box {
+    max-width: 700px; /* más ancho en escritorio */
+    width: 80%; /* ocupa buena parte del contenedor */
+    padding: 3rem; /* más espacio interior */
+    margin: 2rem auto; /* centrado horizontal con separación arriba y abajo */
+    flex-direction: column; /* puedes usar row si quieres contenido lado a lado */
+    align-items: flex-start; /* contenido alineado a la izquierda */
+    text-align: left; /* asegura que el texto esté alineado */
+  }
+
+  .container-form h2,
+  .bizum-box h2 {
+    text-align: center; /* el título sigue centrado */
+    font-size: 2rem; /* título más grande en escritorio */
+  }
+
+  form label {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  label.checkbox-label {
+    display: flex;
+    align-items: center; /* centra verticalmente */
+    gap: 0.5rem; /* espacio entre checkbox y texto */
+  }
+
+  label.checkbox-label input[type="checkbox"] {
+    width: auto; /* no ocupe todo el ancho */
+    margin: 0; /* elimina márgenes extra */
+    padding: 0; /* elimina padding */
+    vertical-align: middle; /* asegura que se alinee con el texto */
+  }
+
+  form input,
+  form textarea,
+  form select {
+    max-width: 100%; /* ocupa todo el ancho disponible de la caja */
+    font-size: 1rem; /* texto más legible en escritorio */
+    padding: 1rem;
+  }
+
+  form button {
+    background-color: #ff4400;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  #fes-te-soci h2,
+  #fam-acollidora h2 {
+    text-align: center;
+  }
+
+  #fes-te-soci p,
+  #fam-acollidora p,
+  .hero-bizum,
+  #voluntariat p {
+    text-align: center;
   }
 }
