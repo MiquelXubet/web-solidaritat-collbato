@@ -9,25 +9,42 @@
   </head>
   <body>
     <!-- Header -->
-<header>
-  <div class="logo">
-    <img src="img/logo manelets.jpg" alt="Collbató per a la Solidaritat" />
-  </div>
-  <button class="menu-toggle">&#9776;</button>
-</header>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="img/logo manelets.jpg"
+            alt="Collbató per a la Solidaritat"
+          />
+        </a>
+      </div>
 
-<!-- Overlay menú -->
-<div class="menu-overlay">
-  <div class="menu-cuadro">
-    <button class="menu-close">&times;</button>
-    <ul>
-      <li><a href="qui-som.html">Qui som</a></li>
-      <li><a href="colabora.html">Col·labora</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contacte.html">Contacte</a></li>
-    </ul>
-  </div>
-</div>
+      <!-- Menú escriptori -->
+      <nav>
+        <ul>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="colabora.html">Col·labora</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botó hamburguesa mòbil -->
+      <button class="menu-toggle">&#9776;</button>
+    </header>
+
+    <!-- Overlay menú mòbil -->
+    <div class="menu-overlay">
+      <div class="menu-cuadro">
+        <button class="menu-close">&times;</button>
+        <ul>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="colabora.html">Col·labora</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Hero -->
     <section id="inici" class="hero">
@@ -39,14 +56,17 @@
     <section id="qui-som">
       <div class="container">
         <h2>Qui som</h2>
-        <!-- Versió resumida per mòbil -->
         <p class="text-mobil">
-          Som una ONGD de Collbató que ajuda els nens i nenes afectats per la radiació de Txernòbil. Cada estiu els acollim a casa nostra per millorar la seva salut i qualitat de vida: mengen aliments no contaminats, reben visites mèdiques completes i participen en activitats lúdiques i casals d’estiu amb nens del poble.  
-  A més, col·laborem amb les seves famílies d’origen donant suport amb material escolar, roba i aliments.  
-  Creiem que tots els infants mereixen un futur saludable i ple d’oportunitats. T’hi vols sumar?
-</p>
+          Som una ONGD de Collbató que ajuda els nens i nenes afectats per la
+          radiació de Txernòbil. Cada estiu els acollim a casa nostra per
+          millorar la seva salut i qualitat de vida: mengen aliments no
+          contaminats, reben visites mèdiques completes i participen en
+          activitats lúdiques i casals d’estiu amb nens del poble. A més,
+          col·laborem amb les seves famílies d’origen donant suport amb material
+          escolar, roba i aliments. Creiem que tots els infants mereixen un
+          futur saludable i ple d’oportunitats. T’hi vols sumar?
         </p>
-        <!-- Versió completa per ordinador -->
+
         <p class="text-escriptori">
           Som una ONGD de Collbató que ajuda els nens i nenes afectats per la
           radiació de Txernòbil. Han passat més de 37 anys des de l’accident
@@ -81,30 +101,6 @@
       </div>
     </section>
 
-    <!-- Projectes -->
-    <!-- <section id="projectes">
-      <h2>Projectes</h2>
-      <div class="grid">
-        <article>
-          <h3>Projecte A</h3>
-          <p>Descripció breu del projecte A.</p>
-        </article>
-        <article>
-          <h3>Projecte B</h3>
-          <p>Descripció breu del projecte B.</p>
-        </article>
-      </div>
-    </section> -->
-
-    <!-- Notícies -->
-    <!-- <section id="noticies">
-      <h2>Últimes notícies</h2>
-      <article>
-        <h3>Activitat recent</h3>
-        <p>Resum de la notícia o activitat.</p>
-      </article>
-    </section> -->
-
     <!-- Col·labora -->
     <section id="colabora">
       <h2>Col·labora</h2>
@@ -114,7 +110,6 @@
       </p>
 
       <div class="cards">
-        <!-- Targeta 1 -->
         <article class="card">
           <img src="img/icono acullida.png" alt="Voluntari" />
           <h3>Fes-te voluntari/a</h3>
@@ -124,7 +119,6 @@
           </p>
         </article>
 
-        <!-- Targeta 2 -->
         <article class="card">
           <img src="img/icono-donatiu.png" alt="Donació" />
           <h3>Fes una donació</h3>
@@ -134,7 +128,6 @@
           </p>
         </article>
 
-        <!-- Targeta 3 -->
         <article class="card">
           <img src="img/apadrinar-nen.png" alt="Apadrina un infant" />
           <h3>Apadrina un infant</h3>
@@ -170,7 +163,9 @@
       <p>&copy; 2025 Collbató per a la Solidaritat</p>
       <div class="social">
         <a href="https://www.facebook.com/solidaritatcollbato">Facebook</a> |
-        <a href="#">Instagram</a>
+        <a href="https://www.instagram.com/collbatoperalasolidaritat/"
+          >Instagram</a
+        >
       </div>
     </footer>
   </body>
