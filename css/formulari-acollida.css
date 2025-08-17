@@ -101,28 +101,20 @@ header a {
   color: #333;
 }
 
-/* HERO */
-/* .hero {
-  padding: 1rem;
-}
-
 .hero h1 {
   font-size: 2rem;
-  color: #004d40;
-  text-align: center;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .hero p {
-  color: #666;
-  text-align: center;
-  margin-bottom: 2rem;
   font-size: 1.2rem;
-} */
+  text-align: center;
+}
 
 /* SECCIÓ DE COL·LABORACIÓ */
 #colabora {
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -151,7 +143,7 @@ header a {
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +155,7 @@ header a {
 }
 
 .colabora-card img {
-  width: auto;
+  width: 200px;
   height: 200px;
   object-fit: cover;
   margin-bottom: 1rem;
@@ -195,6 +187,154 @@ header a {
   background: #004d40;
 }
 
+/* FORMULARIS i CAIXES */
+.form-container,
+.bizum-box {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.form-container h2,
+.bizum-box h2 {
+  color: #ff4400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #00695c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #004d40;
+}
+
+/* BIZUM INFO */
+#bizum-info {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.bizum-box p {
+  margin: 0.8rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.bizum-qr {
+  width: 200px;
+  margin-top: 1rem;
+}
+
+#bizum-info .btn {
+  display: inline-block;
+  background: #00695c;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#bizum-info .btn:hover {
+  background: #004d40;
+}
+
+/* Modal de voluntariat */
+
+#voluntariat {
+  padding: 1rem;
+}
+
+#voluntariat-modal {
+  display: flex; /* Mostra sempre el modal */
+  justify-content: center; /* Centrat horitzontal */
+  align-items: center; /* Centrat vertical */
+  min-height: 40vh; /* Alçada mínima */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#voluntariat h2 {
+  color: #004d40;
+  text-align: center;
+}
+
+#voluntariat p {
+  text-align: justify;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.modal-content h3 {
+  color: #ff4400;
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.modal-content a {
+  color: #00695c;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
   background: #004d40;
   color: white;
@@ -247,7 +387,7 @@ footer {
   }
 
   .colabora-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per fila */
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
 
@@ -256,10 +396,7 @@ footer {
   }
 
   .colabora-card img {
-    width: 100%; /* ocupa tota l'amplada del card */
-    height: 250px; /* altura fixa per a totes */
-    object-fit: cover; /* retalla i omple l'espai sense deformar */
-    border-radius: 8px 8px 0 0;
-    margin-bottom: 1rem;
+    width: 250px;
+    height: 250px;
   }
 }

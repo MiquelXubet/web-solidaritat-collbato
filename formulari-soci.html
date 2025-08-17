@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Col·labora - Collbató per a la Solidaritat</title>
+    <link rel="stylesheet" href="./css/formulari-acollida.css" />
+    <script src="./JS/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="img/logo manelets.jpg"
+            alt="Collbató per a la Solidaritat"
+          />
+        </a>
+      </div>
+      <button class="menu-toggle">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="colabora.html">Col·labora</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Overlay menú -->
+    <div class="menu-overlay">
+      <div class="menu-cuadro">
+        <button class="menu-close">&times;</button>
+        <ul>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="colabora.html">Col·labora</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="fes-te-soci">
+      <div class="container-form">
+        <h2>Fes-te soci</h2>
+        <p>
+          Uneix-te a la nostra associació i ajuda’ns a continuar millorant la
+          vida dels nens i nenes acollits. Escull la teva quota anual i omple
+          les dades necessàries.
+        </p>
+
+        <form action="#" method="post">
+          <label for="nom">Nom</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="El teu nom"
+            required
+          />
+
+          <label for="cognoms">Cognoms</label>
+          <input
+            type="text"
+            id="cognoms"
+            name="cognoms"
+            placeholder="Els teus cognoms"
+            required
+          />
+
+          <label for="email">Correu electrònic</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="El teu correu electrònic"
+            required
+          />
+
+          <label for="telefon">Telèfon</label>
+          <input
+            type="tel"
+            id="telefon"
+            name="telefon"
+            placeholder="Telèfon"
+            required
+          />
+
+          <label for="adreca">Adreça</label>
+          <input
+            type="text"
+            id="adreca"
+            name="adreca"
+            placeholder="Carrer, número, ciutat"
+            required
+          />
+
+          <label for="quota">Tipus de quota</label>
+          <select id="quota" name="quota" required>
+            <option value="">Selecciona la quota anual</option>
+            <option value="individual">Individual - 50€</option>
+            <option value="familiar">Familiar - 80€</option>
+            <option value="colaborador">Col·laborador - 120€</option>
+          </select>
+
+          <label>
+            <input type="checkbox" name="consentiment" required />
+            Accepto les condicions de la política de privacitat i ús de les
+            meves dades.
+          </label>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Collbató per a la Solidaritat</p>
+      <div class="social">
+        <a href="https://www.facebook.com/solidaritatcollbato">Facebook</a> |
+        <a href="https://www.instagram.com/collbatoperalasolidaritat/"
+          >Instagram</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
